@@ -24,7 +24,7 @@ export default function DashboardComp() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch('http://localhost:3500/api/test/getUsers?limit=5',{
+        const res = await fetch('https://blog-backend-beta-two.vercel.app/api/test/getUsers?limit=5',{
             method:'GET',
             headers: {
                 'Content-Type': "application/json",
@@ -43,7 +43,7 @@ export default function DashboardComp() {
     };
     const fetchPosts = async () => {
       try {
-        const res = await fetch('http://localhost:3500/api/create/getPosts?limit=5',{
+        const res = await fetch('https://blog-backend-beta-two.vercel.app/api/create/getPosts?limit=5',{
             method:'GET',
             headers: {
                 'Content-Type': "application/json",
@@ -62,7 +62,7 @@ export default function DashboardComp() {
     };
     const fetchComments = async () => {
       try {
-        const res = await fetch('http://localhost:3500/api/comment/getcomments?limit=5',{
+        const res = await fetch('https://blog-backend-beta-two.vercel.app/api/comment/getcomments?limit=5',{
             method:'GET',
             headers: {
                 'Content-Type': "application/json",

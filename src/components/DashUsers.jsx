@@ -16,7 +16,7 @@ function DashUsers() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const res = await fetch('http://localhost:3500/api/test/getUsers', {
+                const res = await fetch('https://blog-backend-beta-two.vercel.app/api/test/getUsers', {
                     method: 'get',
                     headers: {
                         'Content-Type': "application/json",

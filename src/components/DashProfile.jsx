@@ -100,7 +100,7 @@ function DashProfile() {
         try {
             dispatch(updateStart())
 
-            let result = await fetch(`http://localhost:3500/api/test/updateUser/${currentUser.user._id}`, {
+            let result = await fetch(`https://blog-backend-beta-two.vercel.app/api/test/updateUser/${currentUser.user._id}`, {
                 method: 'put',
                 body: JSON.stringify(formdata),
                 headers: {
@@ -132,7 +132,7 @@ function DashProfile() {
         setShowModal(false)
         try {
             dispatch(deleteStart())
-            let result = await fetch(`http://localhost:3500/api/test/deleteUser/${currentUser.user._id}`, {
+            let result = await fetch(`https://blog-backend-beta-two.vercel.app/api/test/deleteUser/${currentUser.user._id}`, {
                 method: 'delete',
                 headers: {
                     'Content-Type': "application/json"

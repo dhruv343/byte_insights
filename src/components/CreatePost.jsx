@@ -71,7 +71,7 @@ function CreatePost() {
 
         try {
 
-            let result = await fetch("http://localhost:3500/api/create/post", {
+            let result = await fetch("https://blog-backend-beta-two.vercel.app/api/create/post", {
                 method: 'post',
                 body: JSON.stringify(formData),
                 headers: {

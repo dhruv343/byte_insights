@@ -15,7 +15,7 @@ function DashPosts() {
     useEffect(() => {
 
         const getPosts = async () => {
-            let result = await fetch(`http://localhost:3500/api/create/getPosts?userId=${currentUser.user._id}`, {
+            let result = await fetch(`https://blog-backend-beta-two.vercel.app/api/create/getPosts?userId=${currentUser.user._id}`, {
                 method: 'get',
                 headers: {
                     'Content-Type': "application/json",
@@ -39,7 +39,7 @@ function DashPosts() {
     const handleShowMore = async () => {
         const startIndex = userPosts.length
 
-        let result = await fetch(`http://localhost:3500/api/create/getPosts?startIndex=${startIndex}&userId=${currentUser.user._id}`, {
+        let result = await fetch(`https://blog-backend-beta-two.vercel.app/api/create/getPosts?startIndex=${startIndex}&userId=${currentUser.user._id}`, {
             method: 'get',
             headers: {
                 'Content-Type': "application/json",
@@ -58,7 +58,7 @@ function DashPosts() {
     const handleDeletePost=async()=>{
         setShowModal(false)
         try {
-            let result = await fetch(`http://localhost:3500/api/create/delete/${postIdToDelete}/${currentUser.user._id}`, {
+            let result = await fetch(`https://blog-backend-beta-two.vercel.app/api/create/delete/${postIdToDelete}/${currentUser.user._id}`, {
                 method: 'delete',
                 headers: {
                     'Content-Type': "application/json"

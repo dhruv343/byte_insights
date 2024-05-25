@@ -15,7 +15,7 @@ function Comm({ comm, onLike ,onEdit ,onDelete}) {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await fetch(`http://localhost:3500/api/test/${comm.userId}`);
+        const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/test/${comm.userId}`);
         const data = await res.json();
         if (res.ok) {
           setUser(data);
@@ -35,7 +35,7 @@ function Comm({ comm, onLike ,onEdit ,onDelete}) {
 
   const handleSave = async () => {
     try {
-      const res = await fetch(`http://localhost:3500/api/comment/editComment/${comm._id}`, {
+      const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/comment/editComment/${comm._id}`, {
 
         method: 'PUT',
         headers: {

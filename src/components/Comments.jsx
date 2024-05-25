@@ -18,7 +18,7 @@ function Comments({ postId }) {
   useEffect(() => {
     const getComm = async () => {
       try {
-        const result = await fetch(`http://localhost:3500/api/comment/getAllComments/${postId}`)
+        const result = await fetch(`https://blog-backend-beta-two.vercel.app/api/comment/getAllComments/${postId}`)
         const data = await result.json()
         setComments(data)
       } catch (error) {
@@ -40,7 +40,7 @@ function Comments({ postId }) {
         setError("Please enter any comment first")
         return
       }
-      const result = await fetch("http://localhost:3500/api/comment/addcomment", {
+      const result = await fetch("https://blog-backend-beta-two.vercel.app/api/comment/addcomment", {
         method: 'post',
         body: JSON.stringify({ content: comment, postId: postId, userId: currentUser.user._id }),
         headers: {
@@ -66,7 +66,7 @@ function Comments({ postId }) {
         navigate('/signin');
         return;
       }
-      const res = await fetch(`http://localhost:3500/api/comment/likeComment/${commentId}`, {
+      const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/comment/likeComment/${commentId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': "application/json",
@@ -109,7 +109,7 @@ function Comments({ postId }) {
         navigate('/sign-in');
         return;
       }
-      const res = await fetch(`http://localhost:3500/api/comment/deleteComment/${commentId}`, {
+      const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/comment/deleteComment/${commentId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': "application/json",

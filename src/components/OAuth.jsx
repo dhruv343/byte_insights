@@ -21,7 +21,7 @@ function OAuth() {
 
       const resultFromGoogle = await signInWithPopup(auth, provider);
       console.log(resultFromGoogle);
-      let result = await fetch("http://localhost:3500/api/user/google", {
+      let result = await fetch("https://blog-backend-beta-two.vercel.app/api/user/google", {
         method: "post",
         body: JSON.stringify(
           {
