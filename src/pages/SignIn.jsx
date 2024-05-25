@@ -43,7 +43,7 @@ function SignUp() {
 
         try {
             dispatch(signInStart());
-            let result = await fetch("http://localhost:3500/api/user/authlogin", {
+            let result = await fetch("https://blog-backend-beta-two.vercel.app/api/user/authlogin", {
                 method: 'post',
                 body: JSON.stringify({ email, password }),
                 headers: {

@@ -36,7 +36,7 @@ export default function Search() {
         const fetchPosts = async () => {
             setLoading(true);
             const searchQuery = urlParams.toString();
-            const res = await fetch(`http://localhost:3500/api/create/getPosts?${searchQuery}`);
+            const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/create/getPosts?${searchQuery}`);
             if (!res.ok) {
                 setLoading(false);
                 return;

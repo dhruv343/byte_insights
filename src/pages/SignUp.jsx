@@ -36,7 +36,7 @@ function SignUp() {
 
             setLoading(true);
             setError(null);
-            let res = await fetch("http://localhost:3500/api/user/auth", {
+            let res = await fetch("https://blog-backend-beta-two.vercel.app/api/user/auth", {
                 method: 'post',
                 body: JSON.stringify({
                     username: name, email, password

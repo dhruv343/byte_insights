@@ -10,7 +10,7 @@ function News() {
     const getNews = async () => {
       try {
         setLoading(true)
-        const result = await fetch(`http://localhost:3500/api/tech/news`, {
+        const result = await fetch(`https://blog-backend-beta-two.vercel.app/api/tech/news`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ function PostPage() {
     const fetchPost = async () => {
       try {
         setLoading(true)
-        const result = await fetch(`http://localhost:3500/api/create/getPosts?slug=${postSlug}`, {
+        const result = await fetch(`https://blog-backend-beta-two.vercel.app/api/create/getPosts?slug=${postSlug}`, {
           method: 'get',
           headers: {
             'Content-Type': "application/json",

@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch('http://localhost:3500/api/create/getPosts');
+      const res = await fetch('https://blog-backend-beta-two.vercel.app/api/create/getPosts');
       const data = await res.json();
       setPosts(data.posts);
     };
