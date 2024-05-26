@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from 'react';
 import PostCard from "../components/PostCard"
-
+import { ReactTyped } from "react-typed";
 function Home() {
 
   const [posts, setPosts] = useState([]);
@@ -107,7 +107,10 @@ function Home() {
     <div className='min-h-screen'>
 
       <div className="container mx-auto p-8 max-w-6xl">
-        <h1 className="text-5xl mt-10 mb-4 font-serif md:text-7xl auto-type">Explore Byte Insights</h1>
+        <h1 className="text-5xl mt-10 mb-4 font-serif md:text-7xl auto-type">
+        {" "}
+        <ReactTyped strings={["Explore Byte Insights"]} typeSpeed={100} loop />
+        </h1>
         <p className="text-md mt-5 md:mt-10 text-gray-700 mb-8 md:text-lg">
           Explore diverse tech topics and gain valuable insights at Byte Insights. Dive into dynamic thinking and discover fresh perspectives and knowledge on a wide range of subjects.</p>
         <Link to={"/search"}><Button gradientDuoTone="greenToBlue" outline className='font-bold'>Let's Explore</Button></Link>
