@@ -44,7 +44,7 @@ function DashUsers() {
     const handleShowMore = async () => {
         const startIndex = users.length;
         try {
-            const res = await fetch(`http://localhost:3500/api/test/getUsers?startIndex=${startIndex}`, {
+            const res = await fetch(`https://blog-backend-beta-two.vercel.app/api/test/getUsers?startIndex=${startIndex}`, {
                 method: 'get',
                 headers: {
                     'Content-Type': "application/json",
@@ -65,7 +65,7 @@ function DashUsers() {
 
     const handleDeleteUser = async () => {
         try {
-            const res = await fetch(`http://localhost:3500/api/test/deleteUser/${userIdToDelete}`, {
+            const res = await fetch(`https://blog-backend-beta-two.vercel.app/test/deleteUser/${userIdToDelete}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': "application/json"
