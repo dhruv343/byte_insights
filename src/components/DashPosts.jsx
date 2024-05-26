@@ -142,7 +142,7 @@ function DashPosts() {
                     ))}
                 </Table>
 
-            </> : <p>No posts found</p>}
+            </> : <p>You have no posts yet!</p>}
             {showMore && <button onClick={handleShowMore} className='w-full py-5 text-teal-500 self-center'>Show More</button>}
 
             {showModal && <Modal show={showModal} onClose={() => { setShowModal(false) }} popup>
